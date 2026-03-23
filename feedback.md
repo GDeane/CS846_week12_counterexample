@@ -78,8 +78,7 @@ catch this regression because correctness tests are not timing tests.
 
 ### 3. New and Updated Guidelines that worked for Problem A_1
 
-#### Guideline 2 (Revised): Before asking the LLM it is allowed to change the algorithm, ask the LLM to identify
-*why* the current algorithm was chosen
+#### Guideline 2 (Revised): Before asking the LLM it is allowed to change the algorithm, ask the LLM to identify _why_ the current algorithm was chosen
 
 **Description:**
 
@@ -1465,6 +1464,7 @@ more trustworthy.
 Context Given: `constraint_example.py`
 
 Before optimizing this function:
+
 1. Start from the return value and trace backward
 2. Identify all computations that do NOT affect the output
 3. Remove dead code first
