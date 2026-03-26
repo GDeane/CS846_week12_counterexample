@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Purpose
 
-This is a CS846 course assignment repository for Week 11 (Performance Optimization). The goal is to document counterexample
+This is a CS846 course assignment repository for Week 12 (Logging). The goal is to document counterexample
 problems that demonstrate cases where AI-assisted Code Review guidelines (specifically for GitHub Copilot) fail, and
 then propose improved or revised guidelines that succeed.
 
@@ -16,9 +16,9 @@ then propose improved or revised guidelines that succeed.
        apply correctly, with the failing prompt/output and explanation of why it's sub-optimal
     3. **New/Updated Guidelines that worked** — a revised guideline with prompt, output, and result
 
-- `Week11/A_1/` — Starter code and example tests for Problem A (assigned to Gavin Deane)
-- `Week11/B_1/` — Starter code and example tests for Problem B (assigned to Artemiy Vishnyakov)
-- `Week11/C_1/` — Starter code and example tests for Problem C (assigned to Savira Umar)
+- `Week12/A_1/` — Starter code and example tests for Problem A (assigned to Gavin Deane)
+- `Week12/B_1/` — Starter code and example tests for Problem B (assigned to Artemiy Vishnyakov)
+- `Week12/C_1/` — Starter code and example tests for Problem C (assigned to Savira Umar)
 
 ## Workflow
 
@@ -27,7 +27,7 @@ replaced with the actual problem code and test files.
 
 When adding a problem:
 
-1. Place the function/source code and an example test file in the relevant `Week11/X_1/` directory
+1. Place the function/source code and an example test file in the relevant `Week12/X_1/` directory
 2. Fill in the corresponding section of `feedback.md` — task description, failing guideline, and improved guideline
 
 ## feedback.md Conventions
