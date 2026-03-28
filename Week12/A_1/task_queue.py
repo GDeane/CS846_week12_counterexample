@@ -48,10 +48,11 @@ def worker_thread(
         task_queue.task_done()
 
 
-def run_dispatcher(num_tasks: int, num_workers: int) -> dict:
+def run_dispatcher(num_tasks: int, num_workers: int, timeout: float = 10.0) -> dict:
     """
     Dispatch `num_tasks` tasks across `num_workers` worker threads.
     Returns a dict mapping task_id -> result for all completed tasks.
+    Blocks until all tasks finish or `timeout` seconds elapse.
     """
     task_queue: Queue = Queue()
     resource_lock = threading.Lock()
@@ -71,9 +72,16 @@ def run_dispatcher(num_tasks: int, num_workers: int) -> dict:
         t.start()
         workers.append(t)
 
-    task_queue.join()
-    stop_event.set()
+    finished = threading.Event()
 
+    def wait_for_queue():
+        task_queue.join()
+        finished.set()
+
+    threading.Thread(target=wait_for_queue, daemon=True).start()
+    finished.wait(timeout=timeout)
+
+    stop_event.set()
     for t in workers:
         t.join(timeout=1.0)
 
