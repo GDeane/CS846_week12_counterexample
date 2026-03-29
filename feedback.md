@@ -613,11 +613,12 @@ This makes logs harder to interpret.
 3. Difficult to use in real systems
 
 Because logs are inconsistent:
+
 	•	they cannot be easily searched
 	•	they cannot be filtered
 	•	they are not suitable for monitoring
+	
 4. No system-wide consistency
-
 Each function logs independently instead of following a single logging standard across the codebase.
 The model added logging, but failed to enforce a consistent format across all functions, which is the core requirement of Guideline 2.
 -
@@ -651,6 +652,7 @@ In real systems, logs must be:
 ### Prompt and Context
 
 **Improved Prompt:**
+
 Add logging to this account management service.
 
 STRICT REQUIREMENTS:
@@ -701,10 +703,15 @@ def delete_account(user_id):
     _log("delete_account", user_id, "started", "delete request")
 ```
 
+
 **Result**
+
+
 The improved version produces logs that are:
 	•	consistent across all functions 
 	•	structured and predictable 
 	•	easy to search and filter 
 	•	suitable for real-world debugging 
+
+	
 ---
