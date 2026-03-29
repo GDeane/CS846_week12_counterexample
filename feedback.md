@@ -708,9 +708,13 @@ def delete_account(user_id):
 
 
 The improved version produces logs that are:
+
 	•	consistent across all functions 
+	
 	•	structured and predictable 
+	
 	•	easy to search and filter 
+	
 	•	suitable for real-world debugging 
 
 	
