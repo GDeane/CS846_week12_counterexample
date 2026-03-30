@@ -1,0 +1,29 @@
+txn_id,timestamp,type,amount,currency,from_account,to_account,description
+T0001,2026-03-01T09:00:00Z,deposit,500.00,CAD,,100001,Paycheque
+T0002,2026-03-01T10:30:00Z,withdrawal,75.25,CAD,100002,,ATM cash
+T0003,2026-03-02T12:00:00Z,transfer,200.00,CAD,100003,100004,Rent support
+T0004,2026-03-03T08:15:00Z,deposit,25.00,CAD,,100005,Signup bonus
+T0005,2026-03-03T18:45:00Z,withdrawal,20.00,CAD,100004,,Groceries
+T0006,2026-03-04T14:20:00Z,transfer,1000.00,CAD,100001,100002,Split utilities
+T0007,2026-03-05T16:05:00Z,withdrawal,16.00,CAD,100008,,Coffee + snack (should overdraft)
+T0008,2026-03-06T11:00:00Z,deposit,100.00,CAD,,100008,Refund
+T0009,2026-03-07T09:30:00Z,transfer,99999.99,CAD,100007,100001,Large transfer
+T0010,2026-03-08T13:00:00Z,transfer,10.00,CAD,999999,100006,Unknown source account (edge case)
+T0011,2026-03-09T07:10:00Z,withdrawal,0.00,CAD,100006,,No-op withdrawal
+T0012,2026-03-10T23:59:59Z,deposit,1.00,CAD,,100006,Interest
+T0013,2026-03-11T09:00:00Z,payment,12.00,CAD,100001,100002,Invalid type (payment)
+T0014,2026-03-11T10:00:00Z,deposit,-50.00,CAD,,100003,Negative deposit
+T0015,2026-03-11T11:00:00Z,withdrawal,-10.00,CAD,100002,,Negative withdrawal
+T0016,2026-03-11T12:00:00Z,transfer,0.00,CAD,100001,100002,Zero transfer amount
+T0017,2026-03-11T13:00:00Z,transfer,25.00,CAD,100004,,Missing to_account for transfer
+T0018,2026-03-11T14:00:00Z,transfer,25.00,CAD,,100004,Missing from_account for transfer
+T0019,2026-03-11T15:00:00Z,withdrawal,25.00,CAD,, ,Missing from_account (blank/space)
+T0020,2026-03-11T16:00:00Z,deposit,25.00,CAD,100005,100006,Deposit should not have from_account
+T0021,2026-03-11T17:00:00Z,withdrawal,25.00,CAD,100005,100006,Withdrawal should not have to_account
+T0023,2026-03-11T19:00:00Z,deposit,NaN,CAD,,100001,Amount is NaN
+T0024,2026-03-11T20:00:00Z,withdrawal,ten,CAD,100001,,Amount not numeric
+T0025,2026-03-32T09:00:00Z,deposit,10.00,CAD,,100001,Malformed date (day 32)
+T0026,not-a-timestamp,deposit,10.00,CAD,,100001,Malformed timestamp
+T0027,2026-03-11T21:00:00Z,transfer,5.00,CAD,100003,100003,Transfer to self
+T0028,2026-03-11T22:00:00Z,deposit,10.00,CAD,,999998,Unknown destination account
+T0006,2026-03-12T09:00:00Z,transfer,10.00,CAD,100001,100002,Duplicate txn_id (T0006)

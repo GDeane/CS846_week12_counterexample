@@ -1,0 +1,11 @@
+rule_id,account_id,applies_to,txn_type,min_amount,max_amount,currency,counterparty_account
+BL001,100007,from,transfer,0.01,,CAD,,
+BL002,100008,from,withdrawal,20.00,,CAD,,
+BL003,100004,from,transfer,500.00,,CAD,, 
+BL004,100001,from,transfer,25000.00,,CAD,, 
+BL005,100002,to,deposit,0.01,10000.00,CAD,, 
+BL007,100006,from,withdrawal,100.00,,CAD,, 
+BL008,100005,from,transfer,0.01,,CAD,,
+BL009,100002,from,transfer,0.01,,CAD,100001,
+BL010,100001,to,transfer,90000.00,,CAD,,
+BL_BAD,100001,from,transfer,500.00,10.00,CAD,,

@@ -1,0 +1,9 @@
+account_id,customer_name,email,currency,balance
+100001,Alice Nguyen,alice.nguyen@example.com,CAD,100579.99
+100002,Bob Smith,bob.smith@example.com,CAD,4949.50
+100003,Chloe Patel,chloe.patel@example.com,CAD,9076.54
+100004,Diego Rivera,diego.rivera@example.com,CAD,770.00
+100005,Emma Chen,emma.chen@example.com,CAD,100.00
+100006,Farah Ali,farah.ali@example.com,CAD,324.75
+100007,George Brown,george.brown@example.com,CAD,0.01
+100008,Hannah Lee,hannah.lee@example.com,CAD,367.25
