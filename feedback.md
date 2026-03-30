@@ -394,6 +394,7 @@ allows much faster diagnosis compared to the output where task 0 completed was s
 ### Problem B_1: [Artemiy Vishnyakov]
 
 **Task Description:**
+Add logging to process_transactions.py 
 
 **Starter Code:**
 
@@ -401,7 +402,7 @@ The function and example test file are found in
 https://github.com/GDeane/CS846_week12_counterexample/tree/master/Week12/B_1.
 
 > A note on GenAI contribution: The code examples and test files were generated using
-> GitHub Copilot <MODEL USED>.
+> GitHub Copilot <GPT 5.2>.
 
 ---
 
