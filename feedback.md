@@ -653,7 +653,6 @@ def apply_transactions(accounts: Dict[str, Account], transactions_path: str, bla
 				from_acct = _parse_account_id(transaction.get("from_account", ""))
 				to_acct = _parse_account_id(transaction.get("to_account", ""))
 
-				# Blacklist check (skip silently if disallowed)
 				if _is_blacklisted(
 					blacklist_rules,
 					txn_type=txn_type,
@@ -847,7 +846,7 @@ class Account:
 class BlacklistRule:
 	rule_id: str
 	account_id: str
-	applies_to: str  # "from" or "to"
+	applies_to: str
 	txn_type: str
 	min_amount: Optional[Decimal]
 	max_amount: Optional[Decimal]
